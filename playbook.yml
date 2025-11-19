@@ -1,0 +1,11 @@
+- hosts: server_role_redis_server
+  become: true
+  remote_user: rocky
+  roles:
+    - redis
+
+- hosts: server_role_frontend_server
+  become: true
+  remote_user: ubuntu
+  roles:
+    - frontend
